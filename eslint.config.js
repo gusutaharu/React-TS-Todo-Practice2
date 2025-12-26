@@ -19,10 +19,9 @@ export default defineConfig([
     },
     extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
-    // rules: {
-    //   "react/react-in-jsx-scope": "off",
-    //   "react/jsx-uses-react": "off",
-    // },
+    rules: {
+      'no-console': ['error'],
+    },
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
