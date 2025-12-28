@@ -7,7 +7,7 @@ interface Props {
 
 export const CompleteArea = (props: Props) => {
   const { todos, setTodos } = props;
-  const onClickBack = (id: number) => {
+  const onClickBack = (id: string) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isComplete = false;

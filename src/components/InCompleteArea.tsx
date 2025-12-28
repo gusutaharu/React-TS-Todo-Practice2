@@ -7,7 +7,7 @@ interface Props {
 
 export const InCompleteArea = (props: Props) => {
   const { todos, setTodos } = props;
-  const onClickComplete = (id: number) => {
+  const onClickComplete = (id: string) => {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) {
         todo.isComplete = true;
@@ -16,7 +16,7 @@ export const InCompleteArea = (props: Props) => {
     });
     setTodos(newTodos);
   };
-  const onClickDelete = (id: number) => {
+  const onClickDelete = (id: string) => {
     const newTodos = todos.filter((todo) => todo.id !== id);
     setTodos(newTodos);
   };

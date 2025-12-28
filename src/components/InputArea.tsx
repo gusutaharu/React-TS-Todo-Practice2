@@ -1,5 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { Todo } from '../types/todo';
+import { v4 as uuidv4 } from 'uuid';
 
 interface Props {
   todos: Todo[];
@@ -17,7 +18,7 @@ export const InputArea = (props: Props) => {
 
   const onSubmit = (data: Todo) => {
     const newTodo: Todo = {
-      id: todos.length + 1,
+      id: uuidv4(),
       text: data.text,
       isComplete: false,
     };

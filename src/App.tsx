@@ -4,13 +4,14 @@ import { CompleteArea } from './components/CompleteArea';
 import { InCompleteArea } from './components/InCompleteArea';
 import { InputArea } from './components/InputArea';
 import { Todo } from './types/todo';
+import { v4 as uuidv4 } from 'uuid';
 
 export const App = () => {
   const [Todos, setTodos] = useState<Todo[]>([
-    { id: 1, text: 'タスク１', isComplete: false },
-    { id: 2, text: 'タスク２', isComplete: true },
-    { id: 3, text: 'タスク３', isComplete: false },
-    { id: 4, text: 'タスク４', isComplete: true },
+    { id: uuidv4(), text: 'タスク１', isComplete: false },
+    { id: uuidv4(), text: 'タスク２', isComplete: true },
+    { id: uuidv4(), text: 'タスク３', isComplete: false },
+    { id: uuidv4(), text: 'タスク４', isComplete: true },
   ]);
 
   return (
