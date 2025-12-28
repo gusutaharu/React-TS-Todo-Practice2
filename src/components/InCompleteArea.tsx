@@ -16,6 +16,10 @@ export const InCompleteArea = (props: Props) => {
     });
     setTodos(newTodos);
   };
+  const onClickDelete = (id: number) => {
+    const newTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(newTodos);
+  };
 
   return (
     <div className="border-2 rounded-md border-primary min-h-50 mt-2 py-2 px-4">
@@ -32,7 +36,10 @@ export const InCompleteArea = (props: Props) => {
               >
                 完了
               </button>
-              <button className="bg-gray-200 py-1 px-2 rounded-md ml-1 hover:bg-active hover:text-white hover:cursor-pointer">
+              <button
+                className="bg-gray-200 py-1 px-2 rounded-md ml-1 hover:bg-active hover:text-white hover:cursor-pointer"
+                onClick={() => onClickDelete(todo.id)}
+              >
                 削除
               </button>
             </li>
