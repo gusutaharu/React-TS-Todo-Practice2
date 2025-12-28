@@ -16,8 +16,8 @@ export const App = () => {
   return (
     <div className="w-100 m-2">
       <InputArea todos={Todos} setTodos={setTodos} />
-      <InCompleteArea todos={Todos.filter((todo) => !todo.isComplete)} />
-      <CompleteArea todos={Todos.filter((todo) => todo.isComplete)} />
+      <InCompleteArea todos={Todos} setTodos={setTodos} />
+      <CompleteArea todos={Todos} setTodos={setTodos} />
     </div>
   );
 };
